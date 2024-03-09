@@ -24,7 +24,7 @@ double calcItem(double x, uint16_t n) {
 }
 
 double expn(double x, uint16_t count) {
-    double sum = 1;
+    double summ = 1;
     for (uint64_t i = 1; i <= count; i++) {
         summ += pown(x, i) / fact(i);
     }
@@ -47,5 +47,5 @@ double cosn(double x, uint16_t count) {
     result += m * calcItem(x, i);
     m *= -1;
   }
-  return res;
+    return res;
 }
