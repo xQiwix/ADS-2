@@ -47,5 +47,5 @@ double cosn(double x, uint16_t count) {
     result += m * calcItem(x, i);
     m *= -1;
   }
-    return res;
+  return res;
 }
