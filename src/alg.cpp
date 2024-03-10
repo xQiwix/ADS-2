@@ -37,10 +37,10 @@ double sinn(double x, uint16_t count) {
   for (uint16_t i = 1; i <= count*2; i+=2) {
     if (m % 2 == 0) {
       sin -= calcItem(x, i);
- } else {
+  } else {
     sin += calcItem(x, i);
     }
- m++;
+m++;
   }
   return sin;
 }
@@ -54,7 +54,7 @@ double cosn(double x, uint16_t count) {
     } else {
       cos += calcItem(x, i);
     }
- m++;
+m++;
 }
   return cos;
 }
