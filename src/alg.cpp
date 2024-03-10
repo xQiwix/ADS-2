@@ -33,21 +33,29 @@ double expn(double x, uint16_t count) {
 }
 
 double sinn(double x, uint16_t count) {
-  double result = 0;
-  int m = 1;
-  for (uint16_t i = 1; i < count * 2 + 1; i+=2) {
-    result += m * calcItem(x, i);
-    m *= -1;
+  double sin = 0;
+  uint16_t m = 1;
+  for (uint16_t i = 1; i <= count*2; i+=2) {
+    if (m % 2 == 0) {
+      sin -= calcItem(x, i);
+ } else {
+      sin += calcItem(x, i);
+    }
+ m++;
   }
-  return result;
+  return sin;
 }
 
 double cosn(double x, uint16_t count) {
-  double result1 = 0;
-  int m = 1;
-  for (uint16_t i = 0; i < count * 2; i += 2) {
-    result1 += m * calcItem(x, i);
-    m *= -1;
+  double cos = 1;
+  uint16_t m = 1;
+  for (uint16_t i = 2; i < count*2; i += 2) {
+    if (m % 2 != 0) {
+      cos -= calcItem(x, i);
+    } else {
+      cos += calcItem(x, i);
+    }
+ m++;
   }
-  return result1;
+  return cos;
 }
